@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera vista</title>
+    <style>
+        .resaltado {
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Here are some delicious foods!</h1>
+    <ul>
+    @{
+        string[] listaComida = {"Apple Pie", "Pizza", "Cinnamon Roll","Lasagna", "Donuts", "Chocolate Cake", "Burritos"};
+        foreach (var comida in listaComida)
+    {
+        if (comida.StartsWith("C") || comida.StartsWith("c"))
+        {
+            <li class="resaltado">@comida</li>
+        }
+        else
+        {
+            <p>@comida</p>
+        }
+    }
+    }
+    </ul>
+</body>
+</html>
